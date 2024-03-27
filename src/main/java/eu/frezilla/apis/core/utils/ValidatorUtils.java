@@ -1,4 +1,4 @@
-package eu.frezilla.api.core.utils;
+package eu.frezilla.apis.core.utils;
 
 import java.math.BigInteger;
 import org.apache.commons.lang3.StringUtils;

@@ -1,8 +1,8 @@
 package eu.frezilla.apis.core.domain.insee;
 
 import eu.frezilla.apis.core.validators.string.StringValidator;
-import eu.frezilla.apis.core.validators.string.StringValidatorLength;
-import eu.frezilla.apis.core.validators.string.StringValidatorNumeric;
+import eu.frezilla.apis.core.validators.string.StringLengthValidator;
+import eu.frezilla.apis.core.validators.string.StringNumericValidator;
 
 public class Nic {
     
@@ -13,7 +13,7 @@ public class Nic {
     private String value;
     
     public Nic() {
-        this.stringValidator = (StringValidator) new StringValidatorNumeric(new StringValidatorLength(LENGTH));
+        this.stringValidator = (StringValidator) new StringNumericValidator(new StringLengthValidator(LENGTH));
     }
     
     public final String getValue() {

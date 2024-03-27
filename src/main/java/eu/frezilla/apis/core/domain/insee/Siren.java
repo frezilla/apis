@@ -1,9 +1,9 @@
 package eu.frezilla.apis.core.domain.insee;
 
-import eu.frezilla.api.core.utils.ValidatorUtils;
+import eu.frezilla.apis.core.utils.ValidatorUtils;
 import eu.frezilla.apis.core.validators.string.StringValidator;
-import eu.frezilla.apis.core.validators.string.StringValidatorLength;
-import eu.frezilla.apis.core.validators.string.StringValidatorNumeric;
+import eu.frezilla.apis.core.validators.string.StringLengthValidator;
+import eu.frezilla.apis.core.validators.string.StringNumericValidator;
 import java.math.BigInteger;
 
 public class Siren {
@@ -14,7 +14,7 @@ public class Siren {
     private String value;
     
     public Siren() {
-        this.stringValidator = (StringValidator) new StringValidatorNumeric(new StringValidatorLength(LENGTH));
+        this.stringValidator = (StringValidator) new StringNumericValidator(new StringLengthValidator(LENGTH));
     }
     
     public final boolean isValid() {

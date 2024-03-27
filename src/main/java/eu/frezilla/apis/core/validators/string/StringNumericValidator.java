@@ -2,18 +2,18 @@ package eu.frezilla.apis.core.validators.string;
 
 import org.apache.commons.lang3.StringUtils;
 
-public final class StringValidatorNumeric extends StringValidator {
+public final class StringNumericValidator extends StringValidator {
     
-    public StringValidatorNumeric() {
+    public StringNumericValidator() {
         super(null);
     }
     
-    public StringValidatorNumeric(StringValidator stringValidator) {
+    public StringNumericValidator(StringValidator stringValidator) {
         super(stringValidator);
     }
 
     @Override
-    public boolean localValidate(String s) {
+    protected boolean localValidate(String s) {
         return StringUtils.isNumeric(s);
     }
     

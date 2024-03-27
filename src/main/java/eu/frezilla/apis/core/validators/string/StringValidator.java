@@ -8,7 +8,7 @@ public abstract class StringValidator {
         this.validator = stringValidator;
     }
 
-    public abstract boolean localValidate(String s);
+    protected abstract boolean localValidate(String s);
 
     public final boolean validate(String s) {
         boolean test = true;

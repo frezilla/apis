@@ -1,5 +1,6 @@
 package eu.frezilla.api.core.utils;
 
+import eu.frezilla.apis.core.utils.ValidatorUtils;
 import java.math.BigInteger;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;

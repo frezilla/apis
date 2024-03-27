@@ -1,6 +1,6 @@
 package eu.frezilla.apis.core.domain.insee;
 
-import eu.frezilla.api.core.utils.ValidatorUtils;
+import eu.frezilla.apis.core.utils.ValidatorUtils;
 import java.math.BigInteger;
 
 public class Siret {
