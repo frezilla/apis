@@ -1,4 +1,4 @@
-package eu.frezilla.api.core.utils;
+package eu.frezilla.tu.api.core.utils;
 
 import eu.frezilla.apis.core.utils.ValidatorUtils;
 import java.math.BigInteger;
@@ -15,6 +15,8 @@ public class ValidatorUtilsTest {
         Assertions.assertTrue(ValidatorUtils.checkLuhnKey(BigInteger.valueOf(8763)));
         Assertions.assertFalse(ValidatorUtils.checkLuhnKey(BigInteger.valueOf(543210)));
         Assertions.assertTrue(ValidatorUtils.checkLuhnKey(BigInteger.valueOf(543215)));
+        Assertions.assertTrue(ValidatorUtils.checkLuhnKey(new BigInteger("73282932000074")));        
+        
     }
     
 }

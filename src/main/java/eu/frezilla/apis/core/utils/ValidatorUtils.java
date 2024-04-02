@@ -1,13 +1,12 @@
 package eu.frezilla.apis.core.utils;
 
 import java.math.BigInteger;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 
+@NoArgsConstructor(access = AccessLevel.NONE)
 public final class ValidatorUtils {
-    
-    private ValidatorUtils() {
-        
-    }
     
     public static final boolean checkLuhnKey(BigInteger value) {
         if (value == null) throw new IllegalArgumentException("La valeur du paramètre est égal à null");

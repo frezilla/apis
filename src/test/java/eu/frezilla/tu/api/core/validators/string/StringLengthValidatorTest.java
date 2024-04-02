@@ -1,4 +1,4 @@
-package eu.frezilla.api.core.validators.string;
+package eu.frezilla.tu.api.core.validators.string;
 
 import eu.frezilla.apis.core.validators.string.StringLengthValidator;
 import org.junit.jupiter.api.Assertions;

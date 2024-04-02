@@ -2,39 +2,45 @@ package eu.frezilla.apis.core.domain.insee;
 
 import eu.frezilla.apis.core.utils.ValidatorUtils;
 import java.math.BigInteger;
+import lombok.Getter;
+import lombok.NonNull;
 
-public class Siret {
+@Getter
+public final class Siret {
     
-    private Nic nic;
-    private Siren siren;
+    private final @NonNull Nic nic;
+    private final @NonNull Siren siren;
     
-    public final Nic getNic() {
-        return nic;
+    public Siret(Siren siren, Nic nic) {
+        this.siren = siren;
+        this.nic = nic;
+        
+        if (!isValid()) throw new IllegalArgumentException("Le numéro SIRET n'est pas valide");
     }
     
-    public final Siren getSiren() {
-        return siren;
+    private static boolean checkLaPosteSiret(BigInteger siret) {
+        String strValue = siret.toString();
+        int sum = 0;
+        for (int i = 0; i < strValue.length(); i++) {
+            Character character = strValue.charAt(i);
+            int currentValue = Integer.parseInt(character.toString());
+            sum += currentValue;
+        }
+        return (sum % 5 == 0);
     }
-    
-    public final boolean isValid() {
+
+    private boolean isValid() {
         if (nic == null || siren == null) return false;
         
         String nicValue = nic.getValue();
         String sirenValue = siren.getValue();
         if (nicValue == null || sirenValue == null) return false;
         
-        return ValidatorUtils.checkLuhnKey(new BigInteger(sirenValue + nicValue));
+        if (Siren.LAPOSTE.equals(sirenValue)) {
+            return checkLaPosteSiret(new BigInteger(sirenValue + nicValue));
+        } else {
+            return ValidatorUtils.checkLuhnKey(new BigInteger(sirenValue + nicValue));
+        }
     }
-    
-    public final void setNic(Nic nic) {
-        if (nic == null) throw new IllegalArgumentException("Le nic n'est pas valide");
-        this.nic = nic;
-    }
-    
-    public final void setSiren(Siren siren) {
-        if (siren == null) throw new IllegalArgumentException("Le siren n'est pas valide");
-        this.siren = siren;
-    }
-    
     
 }
