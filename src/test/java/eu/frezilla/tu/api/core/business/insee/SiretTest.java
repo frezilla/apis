@@ -1,8 +1,8 @@
-package eu.frezilla.tu.api.core.domain.insee;
+package eu.frezilla.tu.api.core.business.insee;
 
-import eu.frezilla.apis.core.domain.insee.Nic;
-import eu.frezilla.apis.core.domain.insee.Siren;
-import eu.frezilla.apis.core.domain.insee.Siret;
+import eu.frezilla.apis.core.business.insee.Nic;
+import eu.frezilla.apis.core.business.insee.Siren;
+import eu.frezilla.apis.core.business.insee.Siret;
 import org.junit.jupiter.api.Test;
 
 public class SiretTest {

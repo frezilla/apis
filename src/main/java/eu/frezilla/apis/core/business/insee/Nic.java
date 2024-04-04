@@ -1,7 +1,7 @@
-package eu.frezilla.apis.core.domain.insee;
+package eu.frezilla.apis.core.business.insee;
 
-import eu.frezilla.apis.core.validators.string.StringLengthValidator;
-import eu.frezilla.apis.core.validators.string.StringNumericValidator;
+import eu.frezilla.apis.core.utils.validators.string.StringLengthValidator;
+import eu.frezilla.apis.core.utils.validators.string.StringNumericValidator;
 import lombok.Getter;
 
 @Getter

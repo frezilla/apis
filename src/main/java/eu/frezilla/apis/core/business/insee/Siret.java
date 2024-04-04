@@ -1,4 +1,4 @@
-package eu.frezilla.apis.core.domain.insee;
+package eu.frezilla.apis.core.business.insee;
 
 import eu.frezilla.apis.core.utils.ValidatorUtils;
 import java.math.BigInteger;

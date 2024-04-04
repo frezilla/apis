@@ -1,4 +1,4 @@
-package eu.frezilla.apis.core.validators.string;
+package eu.frezilla.apis.core.utils.validators.string;
 
 /**
  * La classe {@code StringAllUpperCaseValidator} vérifie qu'un {@code String} 
@@ -6,13 +6,13 @@ package eu.frezilla.apis.core.validators.string;
  * <p>Si la chaine de caractères est composée de caractères autres, ces 
  * caractères sont ignorés.
  */
-public class StringAllUpperCaseValidator extends StringValidator {
+public class StringAllUpperCaseValidator extends AbstractStringValidator {
     
     public StringAllUpperCaseValidator() {
         super(null);
     }
     
-    public StringAllUpperCaseValidator(StringValidator stringValidator) {
+    public StringAllUpperCaseValidator(AbstractStringValidator stringValidator) {
         super(stringValidator);
     }
 

@@ -1,12 +1,12 @@
-package eu.frezilla.apis.core.validators.string;
+package eu.frezilla.apis.core.utils.validators.string;
 
-public class StringNotEmptyValidator extends StringValidator {
+public class StringNotEmptyValidator extends AbstractStringValidator {
 
     public StringNotEmptyValidator() {
         super(null);
     }
     
-    public StringNotEmptyValidator(StringValidator stringValidator) {
+    public StringNotEmptyValidator(AbstractStringValidator stringValidator) {
         super(stringValidator);
     }
 

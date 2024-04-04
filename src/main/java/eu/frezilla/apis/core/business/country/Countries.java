@@ -1,4 +1,4 @@
-package eu.frezilla.apis.core.domain.iso.country;
+package eu.frezilla.apis.core.business.country;
 
 import lombok.Getter;
 

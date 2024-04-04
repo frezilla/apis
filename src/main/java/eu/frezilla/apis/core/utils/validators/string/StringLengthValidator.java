@@ -1,6 +1,6 @@
-package eu.frezilla.apis.core.validators.string;
+package eu.frezilla.apis.core.utils.validators.string;
 
-public final class StringLengthValidator extends StringValidator {
+public final class StringLengthValidator extends AbstractStringValidator {
     
     private final int length;
     
@@ -9,7 +9,7 @@ public final class StringLengthValidator extends StringValidator {
         this.length = checkLengthParameter(length);
     }
     
-    public StringLengthValidator(int length, StringValidator stringValidator) {
+    public StringLengthValidator(int length, AbstractStringValidator stringValidator) {
         super(stringValidator);
         this.length = checkLengthParameter(length);
     }

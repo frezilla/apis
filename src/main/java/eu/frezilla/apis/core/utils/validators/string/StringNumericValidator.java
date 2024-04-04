@@ -1,14 +1,14 @@
-package eu.frezilla.apis.core.validators.string;
+package eu.frezilla.apis.core.utils.validators.string;
 
 import org.apache.commons.lang3.StringUtils;
 
-public final class StringNumericValidator extends StringValidator {
+public final class StringNumericValidator extends AbstractStringValidator {
     
     public StringNumericValidator() {
         super(null);
     }
     
-    public StringNumericValidator(StringValidator stringValidator) {
+    public StringNumericValidator(AbstractStringValidator stringValidator) {
         super(stringValidator);
     }
 

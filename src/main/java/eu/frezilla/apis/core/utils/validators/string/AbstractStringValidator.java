@@ -1,15 +1,16 @@
-package eu.frezilla.apis.core.validators.string;
+package eu.frezilla.apis.core.utils.validators.string;
 
-public abstract class StringValidator {
+abstract class AbstractStringValidator implements StringValidator {
 
     private final StringValidator validator;
 
-    StringValidator(StringValidator stringValidator) {
+    AbstractStringValidator(StringValidator stringValidator) {
         this.validator = stringValidator;
     }
 
     protected abstract boolean localValidate(String s);
 
+    @Override
     public final boolean validate(String s) {
         boolean test = true;
         if (this.validator != null) {
