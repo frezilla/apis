@@ -12,7 +12,7 @@ public class StringAllUpperCaseValidator extends AbstractStringValidator {
         super(null);
     }
     
-    public StringAllUpperCaseValidator(AbstractStringValidator stringValidator) {
+    public StringAllUpperCaseValidator(StringValidator stringValidator) {
         super(stringValidator);
     }
 
@@ -24,5 +24,5 @@ public class StringAllUpperCaseValidator extends AbstractStringValidator {
         }
         return true;
     }
-    
+
 }

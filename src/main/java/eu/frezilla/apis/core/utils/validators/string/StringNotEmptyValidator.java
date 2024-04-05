@@ -6,7 +6,7 @@ public class StringNotEmptyValidator extends AbstractStringValidator {
         super(null);
     }
     
-    public StringNotEmptyValidator(AbstractStringValidator stringValidator) {
+    public StringNotEmptyValidator(StringValidator stringValidator) {
         super(stringValidator);
     }
 

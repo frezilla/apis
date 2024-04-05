@@ -9,7 +9,7 @@ public final class StringLengthValidator extends AbstractStringValidator {
         this.length = checkLengthParameter(length);
     }
     
-    public StringLengthValidator(int length, AbstractStringValidator stringValidator) {
+    public StringLengthValidator(int length, StringValidator stringValidator) {
         super(stringValidator);
         this.length = checkLengthParameter(length);
     }

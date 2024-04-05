@@ -8,7 +8,7 @@ public final class StringNumericValidator extends AbstractStringValidator {
         super(null);
     }
     
-    public StringNumericValidator(AbstractStringValidator stringValidator) {
+    public StringNumericValidator(StringValidator stringValidator) {
         super(stringValidator);
     }
 
