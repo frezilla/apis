@@ -31,11 +31,6 @@ public class StringLengthValidatorTest {
         Assertions.assertFalse(new StringLengthValidator(10).validate("01234567"));
         Assertions.assertFalse(new StringLengthValidator(10).validate("0123456789ABCDEF"));
         
-        try {
-            new StringLengthValidator(10).validate(null);
-            Assertions.fail();
-        } catch (IllegalArgumentException e) {
-            
-        }
+        try { new StringLengthValidator(10).validate(null); Assertions.fail(); } catch (IllegalArgumentException e) { }
     }
 }
