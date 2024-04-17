@@ -12,6 +12,7 @@
     </properties>
     <modules>
         <module>mellifera</module>
+        <module>buckfast</module>
     </modules>
     <dependencyManagement>
         <dependencies>
