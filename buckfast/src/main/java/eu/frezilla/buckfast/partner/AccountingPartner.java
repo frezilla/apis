@@ -1,11 +1,11 @@
-package eu.frezilla.buckfast.contributor;
+package eu.frezilla.buckfast.partner;
 
 import eu.frezilla.buckfast.charge.AccountingCharge;
 import java.math.BigDecimal;
 import java.util.Set;
 import org.apache.commons.lang3.tuple.Pair;
 
-public final class AccountingContributor {
+public final class AccountingPartner {
     
     private Set<AccountingCharge> accountingChargeSet;
     
@@ -22,10 +22,14 @@ public final class AccountingContributor {
     }
     
     public final BigDecimal getBalance() {
-        Pair<BigDecimal, BigDecimal> pair = computeCreditAndDebit();
-        BigDecimal debit = pair.getLeft();
-        BigDecimal credit = pair.getRight();
-        return credit.subtract(debit);
+        BigDecimal balanceSum = BigDecimal.ZERO;
+        
+        for (AccountingCharge a : accountingChargeSet) {
+            balanceSum = balanceSum.add(a.getBalance());
+                    
+        }
+
+        return balanceSum;
     }
     
     public final BigDecimal getCredit() {

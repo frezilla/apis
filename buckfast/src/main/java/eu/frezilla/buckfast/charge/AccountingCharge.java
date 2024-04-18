@@ -41,6 +41,11 @@ public class AccountingCharge {
         return pair.getRight();
     }
     
+    public final BigDecimal getBalance() {
+        Pair<BigDecimal, BigDecimal> pair = computeCreditAndDebit();
+        return pair.getLeft().add(pair.getRight());
+    }
+    
     public final BigDecimal getDebit() {
         Pair<BigDecimal, BigDecimal> pair = computeCreditAndDebit();
         return pair.getLeft();
