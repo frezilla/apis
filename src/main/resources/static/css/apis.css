@@ -1,0 +1,14 @@
+@charset "UTF-8";
+@import "tiles.css";
+
+body {
+    background-color: white;
+    font-family: "Arial", "Verdana", "Helvetica", sans-serif;
+    font-size: 14pt;
+}
+
+body > header {
+    background-color: white;
+    color: black;
+    width: 100%;
+}
