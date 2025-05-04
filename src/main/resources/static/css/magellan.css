@@ -15,6 +15,10 @@ div#magellan-modal {
     animation-duration: 0.4s
 }
 
+.display-none {
+    display: none;
+}
+
 span.magellan-modal-close {
     color: white;
     float: right;

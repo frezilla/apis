@@ -3,7 +3,7 @@
 @import "tiles.css";
 
 body {
-    background-color: white;
+    background-color: lightgray;
     font-family: "Arial", "Verdana", "Helvetica", sans-serif;
     font-size: 14pt;
 }
@@ -19,7 +19,13 @@ body > footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: red;
+  background-color: #282a35;
   color: white;
   text-align: center;
+}
+
+body > main {
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
 }

@@ -1,21 +1,10 @@
-function go(url) {
-    console.log("goto -> " + url);
-
-    $.ajax({
-        url: url,
-        error: function (xhr) {
-            console.log("Une erreur a été détectée : " + xhr.status + " " + xhr.statusText);
-        }
-    });
-}
-
 const magellanModalApp = Vue.createApp({
     template:
     `
         <div class="magellan-modal-content">
             <div class="magellan-modal-header">
                 <span class="magellan-modal-close">&times;</span>
-                {{ title }}
+                <h1>{{ title }}</h1>
             </div>
             <div class="magellan-modal-body">
                 {{ message }}
@@ -30,7 +19,7 @@ const magellanModalApp = Vue.createApp({
             backgroundColor: "red",
             message: "Hello World!",
             title: "Titre",
-            footer: "footer"
+            footer: "footer2"
         }
     },
     methods: {
@@ -42,4 +31,16 @@ const magellanModalApp = Vue.createApp({
     }
 });
 
-magellanModalApp.mount("#magellan-modal");
+//magellanModalApp.mount("#magellan-modal");
+
+function go(url) {
+    console.log("goto -> " + url);
+
+    $.ajax({
+        url: url,
+        error: function (xhr) {
+            console.log("Une erreur a été détectée : " + xhr.status + " " + xhr.statusText);
+            //magellanModalApp.displaySuccess("titre", "message", "pied");
+        }
+    });
+}
