@@ -7,14 +7,19 @@
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
                 integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
                 crossorigin="anonymous"></script>
-        
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>                
-        
         <link rel="stylesheet" href="css/apis.css">
     </head>
     <body>
         <header>
-            Entête
+            <div id="header">
+                <div style="display: grid; grid-template-columns: 100px auto;">
+                    <div class="tile13" style="width: 100px; height: 100px"></div><h1>Apis</h1>
+                </div>
+            </div>
+            <div id="navbar">
+                <div><button>menu</button></div>
+            </div>
         </header>
         <main>
             Page principale
@@ -22,8 +27,10 @@
         <footer>
             Bas de page - 2025 Apis
         </footer>
-        <!--<div id="magellan-modal" class="display-none"></div>-->
-        <!--<script src="js/magellan.js"></script>-->
-        
+        <div id="snackbar"></div>
+        <script src="js/magellan.js"></script>
+        <script>
+            go("apiary.html");
+        </script>
     </body>
 </html>

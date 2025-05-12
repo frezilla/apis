@@ -1,9 +1,9 @@
 @charset "UTF-8";
-@import "magellan.css";
+@import "snackbar.css";
 @import "tiles.css";
 
 body {
-    background-color: lightgray;
+    background-color: white;
     font-family: "Arial", "Verdana", "Helvetica", sans-serif;
     font-size: 14pt;
 }
@@ -15,17 +15,41 @@ body > header {
 }
 
 body > footer {
-  position: fixed;
-  left: 0;
+  background-color: #915c00;
   bottom: 0;
-  width: 100%;
-  background-color: #282a35;
-  color: white;
+  color: #eee;
+  left: 0;
+  padding: 5px;
+  position: fixed;
   text-align: center;
+  width: 100%;
 }
 
 body > main {
     background-color: white;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+#header {
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+}
+
+#navbar {
+    background-color: #915c00;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+}
+
+#navbar button {
+    background: none;
+    border: none;
+    color: #eee;
+    font-size: 16pt;
+    margin: 0;
+    padding-bottom: 0;
+    padding-top: 0;
 }
