@@ -34,14 +34,12 @@ body > main {
 #header {
     padding-left: 10%;
     padding-right: 10%;
-    width: 100%;
 }
 
 #navbar {
     background-color: #915c00;
     padding-left: 10%;
     padding-right: 10%;
-    width: 100%;
 }
 
 #navbar button {

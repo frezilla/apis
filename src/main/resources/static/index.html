@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
                 integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
-                crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>                
         <link rel="stylesheet" href="css/apis.css">
     </head>
@@ -14,7 +14,7 @@
         <header>
             <div id="header">
                 <div style="display: grid; grid-template-columns: 100px auto;">
-                    <div class="tile13" style="width: 100px; height: 100px"></div><h1>Apis</h1>
+                    <div class="tile13" style="width: 100px; height: 100px"></div><div><h1>Apis</h1></div>
                 </div>
             </div>
             <div id="navbar">
@@ -25,12 +25,39 @@
             Page principale
         </main>
         <footer>
-            Bas de page - 2025 Apis
+            <div id="projectInfo">version {{ version }}</div>
         </footer>
         <div id="snackbar"></div>
         <script src="js/magellan.js"></script>
         <script>
-            go("apiary.html");
+            const projectInfoApp = Vue.createApp({
+                data() {
+                    return {
+                        description: '',
+                        version: ''
+                    };
+                },
+                methods: {
+                    load() {
+                        fetch(`/api/application`)
+                                .then(response => response.json())
+                                .then(data => {
+                                    this.description = data.description;
+                                    this.version = data.version;
+                                })
+                                .catch(error => {
+                                    console.error('Erreur au chargement des informations de l\'application', error);
+                                });
+                    }
+                },
+                beforeMount() {
+                    this.load();
+                }
+            });
+
+            projectInfoApp.mount('#projectInfo');
+
+//            go("apiary.html");
         </script>
     </body>
 </html>

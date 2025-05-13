@@ -63,14 +63,14 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-<!--        <resources>
+        <resources>
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
-                <includes>
+<!--                <includes>
                     <include>application.properties</include>
-                </includes>
+                </includes>-->
             </resource>
-        </resources>-->
+        </resources>
     </build>
 </project>
