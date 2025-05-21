@@ -1,0 +1,14 @@
+## Fichier release notes
+---
+
+id: APis
+releases:
+    - version: 0.0.1-SNAPSHOT
+      date: 2025-05-16
+      contains:
+        - detail: Création du projet
+    - version: 0.0.2-SNAPSHOT
+      date: 2025-06-19
+      contains:
+        - detail: Deuxième version
+        - detail: Deuxième version      

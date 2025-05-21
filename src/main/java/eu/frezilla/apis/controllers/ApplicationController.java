@@ -15,7 +15,7 @@ public class ApplicationController {
     @Value("${project.version}") private String version;
     
     @GetMapping
-    public AppInfo getInfo() {
+    public AppInfo get() {
         return new AppInfo(name, description, version);
     }
     
