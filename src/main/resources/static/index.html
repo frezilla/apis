@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
                 integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
-        crossorigin="anonymous"></script>
+                crossorigin="anonymous"></script>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>                
         <link rel="icon" type="image/x-icon" href="pics/favicon.svg">
         <link rel="stylesheet" href="css/apis.css">
@@ -22,11 +22,11 @@
                 <div><button>menu</button></div>
             </div>
         </header>
-        <main>
+        <main id="main-content">
             Page principale
         </main>
         <footer>
-            <div id="projectInfo">version {{ version }}</div>
+            <div id="project-info">version {{ version }}</div>
         </footer>
         <div id="snackbar"></div>
         <script src="js/magellan.js"></script>
@@ -56,7 +56,7 @@
                 }
             });
 
-            projectInfoApp.mount('#projectInfo');
+            projectInfoApp.mount('#project-info');
 
             go("apiary.html");
         </script>

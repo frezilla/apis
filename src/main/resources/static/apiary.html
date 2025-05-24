@@ -1,60 +1,40 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://cdn.jsdelivr.net/npm/vue@3.4.27/dist/vue.global.prod.js"></script>
-        <link rel="stylesheet" href="css/apis.css">
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
-              integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-              crossorigin=""/>
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-                integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-                crossorigin="">
-        </script>
-        <style>
-            #map {
-                height: 480px;
-                width: 480px;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            Entête
-        </header>
-        
-        
-        <div>TODO write content</div>
-        
-        <div id="apiary">
-            <header>Rucher</header>
-            <main>
-                <form @submit.prevent="saveProject">
-                    <fieldset>
-                        <label for="name">Nom</label><input type="text" id="name" v-model="formData.name" placeHolder="Name" required>
-                        <label for="commentary">Description</label><input type="text" id="description" v-model="formData.description" placeHolder="Description">
-                        <label for="description">Commentaire</label><input type="text" id="commentary" v-model="formData.commentary" placeHolder="Commentary">
-                        <label for="longitude">Longitude</label><input type="number" id="longitude" v-model="formData.longitude" placeHolder="Longitude">
-                        <label for="latitude">Latitude</label><input type="number" id="latitude" v-model="formData.latitude" placeHolder="latitude">
-                        <div id="map"></div>
-                    </fieldset>
-                    <menu>
-                        <button type="submit">Enregistrer</button>
-                        <button type="button" @click="closeModal">Annuler</button>
-                    </menu>
-                </form>
-                
-            </main>
-            <footer>2025 Apis</footer>
-        </div>
-        
-        
-        <script>
-            // On déclare les coordonnées de Paris
-            let lat = 48.852969;
-            let lon = 2.349903;
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+<style>
+    #map {
+        height: 480px;
+        width: 480px;
+    }
+</style>
+<div id="apiary">
+    <header>Rucher</header>
+    <main>
+        <form @submit.prevent="saveProject">
+            <fieldset>
+                <label for="name">Nom</label><input type="text" id="name" v-model="formData.name" placeHolder="Name" required>
+                <label for="commentary">Description</label><input type="text" id="description" v-model="formData.description" placeHolder="Description">
+                <label for="description">Commentaire</label><input type="text" id="commentary" v-model="formData.commentary" placeHolder="Commentary">
+                <label for="longitude">Longitude</label><input type="number" id="longitude" v-model="formData.longitude" placeHolder="Longitude">
+                <label for="latitude">Latitude</label><input type="number" id="latitude" v-model="formData.latitude" placeHolder="latitude">
+                <div id="map"></div>
+            </fieldset>
+            <menu>
+                <button type="submit">Enregistrer</button>
+                <button class="disabled" type="button" @click="closeModal">Annuler</button>
+            </menu>
+        </form>
+
+    </main>
+    <footer>2025 Apis</footer>
+</div>
+<script>
+    // On déclare les coordonnées de Paris
+    let lat = 48.852969;
+    let lon = 2.349903;
 
 // On initialise la carte (en lui passant 'map' qui est l'ID de la DIV contenant la carte)
             let map = L.map("map", {
@@ -73,5 +53,3 @@
 let marker = L.marker([lat, lon]).addTo(map);
 
         </script>
-    </body>
-</html>

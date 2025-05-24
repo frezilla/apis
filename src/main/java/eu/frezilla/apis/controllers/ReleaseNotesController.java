@@ -19,7 +19,6 @@ public class ReleaseNotesController {
     
     @GetMapping
     public ReleaseNotes get() throws IOException {
-        
         Resource resource = resourceLoader.getResource("classpath:release-notes.yml");
         
         ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
